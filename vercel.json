@@ -1,5 +1,14 @@
 {
-    "rewrites": [
-          { "source": "/menu", "destination": "/menu.html" }
-    ]
+  "redirects": [
+    {
+      "source": "/menu",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/menu.html",
+      "destination": "/",
+      "permanent": true
+    }
+  ]
 }
