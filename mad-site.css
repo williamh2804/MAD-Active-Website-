@@ -18,7 +18,7 @@ h2 { font-size: clamp(2.8rem, 5.5vw, 5.5rem); }
 .shell { width: min(100% - 3rem, 76rem); margin-inline: auto; }
 .skip { position: absolute; top: -5rem; background: var(--yellow); color: var(--ink); padding: .75rem; z-index: 2; }
 .skip:focus { top: .5rem; }
-.header, .hero, .menu-intro, .footer { background: var(--ink); color: white; }
+.header, .hero, .footer { background: var(--ink); color: white; }
 .top, .foot { display: flex; align-items: center; justify-content: space-between; gap: 1rem; }
 .top { min-height: 5.25rem; }
 .logo { width: 4rem; flex: none; }
@@ -37,14 +37,7 @@ h2 { font-size: clamp(2.8rem, 5.5vw, 5.5rem); }
 .facts { background: var(--yellow); }
 .fact-grid { display: flex; justify-content: space-between; gap: 1rem; padding-block: 1.15rem; font-weight: 800; font-size: .9rem; }
 .section, .story { padding-block: clamp(3.5rem, 8vw, 7rem); }
-.section-heading { display: flex; align-items: end; justify-content: space-between; gap: 1rem; margin-bottom: 1.75rem; }
 .text-link { font-size: .94rem; font-weight: 700; white-space: nowrap; }
-.food-grid, .contact-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1.25rem; }
-.food { border: 1px solid var(--line); }
-.food img { aspect-ratio: 4 / 3; object-fit: cover; background: #eee; }
-.food div { padding: 1.2rem; }
-.food h3 { font: 800 2rem/1 var(--heading); }
-.food p, .contact p { margin-top: .65rem; color: #444; }
 .story { background: #f3f3f0; }
 .story-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; }
 .story p { font-size: 1.2rem; max-width: 34rem; }
@@ -53,23 +46,10 @@ h2 { font-size: clamp(2.8rem, 5.5vw, 5.5rem); }
 .contact-grid > div { border-top: 2px solid var(--ink); padding-top: 1.1rem; }
 .contact .text-link { display: inline-block; margin-top: .7rem; }
 .foot { min-height: 5rem; font-size: .9rem; }
-.menu-intro { padding-block: 4rem; }
-.categories { display: flex; flex-wrap: wrap; gap: .6rem; padding-block: 1.5rem; border-bottom: 1px solid var(--line); }
-.categories a { border: 1px solid var(--line); padding: .5rem .85rem; text-decoration: none; font-weight: 700; }
-.categories a:hover { background: var(--yellow); border-color: var(--yellow); }
-.menu-section { margin-block: 3rem; }
-.menu-section .food-grid { margin-top: 1.25rem; }
-.note { margin-top: .7rem; }
 @media (max-width: 720px) {
   .shell { width: calc(100% - 2rem); }
   .hero-grid, .story-grid, .contact-grid { grid-template-columns: 1fr; }
   .hero-copy { padding-block: 3rem; }
   .hero-photo { min-height: 0; aspect-ratio: 5 / 4; }
   .fact-grid { flex-wrap: wrap; gap: .45rem 1rem; }
-  .food-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: .75rem; }
-  .food div { padding: .85rem; }
-}
-@media (max-width: 400px) {
-  .food-grid { grid-template-columns: 1fr; }
-  .section-heading { align-items: start; flex-direction: column; }
 }
