@@ -1,0 +1,75 @@
+:root {
+  --ink: #101010;
+  --yellow: #ffc640;
+  --line: #e1e1dd;
+  --heading: "Barlow Condensed", Impact, sans-serif;
+}
+* { box-sizing: border-box; }
+body { margin: 0; background: white; color: var(--ink); font: 1rem/1.55 "DM Sans", Arial, sans-serif; }
+a { color: inherit; text-underline-offset: .25em; }
+a:focus-visible { outline: 3px solid #a76800; outline-offset: 5px; }
+img { display: block; width: 100%; }
+p, figure { margin: 0; }
+h1, h2, h3 { margin: 0; line-height: 1; }
+h1, h2 { font-family: var(--heading); font-weight: 900; text-transform: uppercase; }
+h1 { font-size: clamp(3.9rem, 8.8vw, 9rem); line-height: .83; }
+h1 span { color: var(--yellow); }
+h2 { font-size: clamp(2.8rem, 5.5vw, 5.5rem); }
+.shell { width: min(100% - 3rem, 76rem); margin-inline: auto; }
+.skip { position: absolute; top: -5rem; background: var(--yellow); color: var(--ink); padding: .75rem; z-index: 2; }
+.skip:focus { top: .5rem; }
+.header, .hero, .menu-intro, .footer { background: var(--ink); color: white; }
+.top, .foot { display: flex; align-items: center; justify-content: space-between; gap: 1rem; }
+.top { min-height: 5.25rem; }
+.logo { width: 4rem; flex: none; }
+.top nav { display: flex; align-items: center; gap: clamp(1rem, 4vw, 3rem); }
+.top nav a { text-decoration: none; font-weight: 700; font-size: .9rem; }
+.top nav a:hover, .top nav a[aria-current] { color: var(--yellow); }
+.hero-grid { display: grid; grid-template-columns: 1fr 1fr; min-height: 34rem; }
+.hero-copy { padding: 4rem 1rem 4rem 0; align-self: center; }
+.eyebrow { color: var(--yellow); font-size: .75rem; font-weight: 700; text-transform: uppercase; letter-spacing: .15em; margin-bottom: 1.5rem; }
+.lede { max-width: 25rem; font-size: 1.15rem; margin-top: 1.5rem; color: #e5e5e5; }
+.button { display: inline-flex; gap: 1.5rem; background: var(--yellow); color: var(--ink); padding: .9rem 1.1rem; margin-top: 1.7rem; text-decoration: none; font-weight: 700; }
+.button:hover { background: white; }
+.hero-photo { position: relative; min-height: 22rem; }
+.hero-photo img { height: 100%; position: absolute; object-fit: cover; }
+.hero-photo figcaption { position: absolute; bottom: 1.25rem; right: 1.25rem; color: white; background: var(--ink); padding: .45rem .75rem; font-size: .8rem; }
+.facts { background: var(--yellow); }
+.fact-grid { display: flex; justify-content: space-between; gap: 1rem; padding-block: 1.15rem; font-weight: 800; font-size: .9rem; }
+.section, .story { padding-block: clamp(3.5rem, 8vw, 7rem); }
+.section-heading { display: flex; align-items: end; justify-content: space-between; gap: 1rem; margin-bottom: 1.75rem; }
+.text-link { font-size: .94rem; font-weight: 700; white-space: nowrap; }
+.food-grid, .contact-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1.25rem; }
+.food { border: 1px solid var(--line); }
+.food img { aspect-ratio: 4 / 3; object-fit: cover; background: #eee; }
+.food div { padding: 1.2rem; }
+.food h3 { font: 800 2rem/1 var(--heading); }
+.food p, .contact p { margin-top: .65rem; color: #444; }
+.story { background: #f3f3f0; }
+.story-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; }
+.story p { font-size: 1.2rem; max-width: 34rem; }
+.story p + p { margin-top: 1rem; }
+.contact-grid { margin-top: 2rem; }
+.contact-grid > div { border-top: 2px solid var(--ink); padding-top: 1.1rem; }
+.contact .text-link { display: inline-block; margin-top: .7rem; }
+.foot { min-height: 5rem; font-size: .9rem; }
+.menu-intro { padding-block: 4rem; }
+.categories { display: flex; flex-wrap: wrap; gap: .6rem; padding-block: 1.5rem; border-bottom: 1px solid var(--line); }
+.categories a { border: 1px solid var(--line); padding: .5rem .85rem; text-decoration: none; font-weight: 700; }
+.categories a:hover { background: var(--yellow); border-color: var(--yellow); }
+.menu-section { margin-block: 3rem; }
+.menu-section .food-grid { margin-top: 1.25rem; }
+.note { margin-top: .7rem; }
+@media (max-width: 720px) {
+  .shell { width: calc(100% - 2rem); }
+  .hero-grid, .story-grid, .contact-grid { grid-template-columns: 1fr; }
+  .hero-copy { padding-block: 3rem; }
+  .hero-photo { min-height: 0; aspect-ratio: 5 / 4; }
+  .fact-grid { flex-wrap: wrap; gap: .45rem 1rem; }
+  .food-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: .75rem; }
+  .food div { padding: .85rem; }
+}
+@media (max-width: 400px) {
+  .food-grid { grid-template-columns: 1fr; }
+  .section-heading { align-items: start; flex-direction: column; }
+}
